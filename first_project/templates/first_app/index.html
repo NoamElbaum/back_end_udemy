@@ -1,14 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html> {% load staticfiles %}
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>First django html page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Hello this is index.html!</h1>
-    <b>{{ insert_me }}</b>
+    <div class="container">
+        <h1>Hello this is index.html!</h1>
+        <b>{{ insert_me }}</b>
+        <h2>This is a beutiful pic</h2>
+        <div class="row">
+            <div class="col-6 "><img class="img-thumbnail" src="{% static 'images/pic.jpg' %}" alt="oops"></div>
+        </div>
+    </div>
 </body>
 
 </html>
