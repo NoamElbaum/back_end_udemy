@@ -1,0 +1,22 @@
+body {
+    background-color: royalblue;
+    text-align: center;
+}
+
+h1,
+h2,
+p {
+    color: white;
+}
+
+table,
+th,
+td {
+    color: white;
+    border: 2px solid black;
+}
+
+th {
+    color: black;
+    font-size: 1.2em;
+}
