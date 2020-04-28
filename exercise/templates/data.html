@@ -1,0 +1,29 @@
+<!DOCTYPE html>{% load staticfiles %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data page</title>
+    <link rel="stylesheet" href="{% static 'css/data.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Here are your users:</h1>
+
+        <ol>
+            {% for user in user_list %}
+            <li>User Info</li>
+            <ul>
+                <li>First Name: {{ user.f_name }}</li>
+                <li>Last Name: {{ user.l_name }}</li>
+                <li>Email: {{ user.email }}</li>
+            </ul>
+            {% endfor %}
+        </ol>
+
+    </div>
+</body>
+
+</html>
