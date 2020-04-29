@@ -12,8 +12,8 @@
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-4">Welcome!</h1>
-            <h2>Go to /formpage to fill the form</h2>
-            <h2>Go to /modelform to use a model form</h2>
+            <h2><a href="{% url 'form_name' %}" class="btn btn-primary">Fill a form</a></h2>
+            <h2><a href="{% url 'index' %}" class="btn btn-primary">Go to model forms page</a></h2>
         </div>
     </div>
 </body>

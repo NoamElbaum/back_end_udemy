@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^formpage/', views.form_name_view, name='form_name'),
-    url(r'^modelform/', include('model_form.urls'))
+    url(r'^modelform/', include('model_form.urls'), name='model_form')
 ]
