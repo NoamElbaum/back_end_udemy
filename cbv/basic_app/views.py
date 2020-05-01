@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import View, TemplateView
+from django.views.generic import View, TemplateView, ListView, DetailView
+from . import models
 
 # simple view
 # Create your views here.
@@ -12,6 +13,7 @@ from django.views.generic import View, TemplateView
 #     def get(self, request):
 #         return HttpResponse('CLASS BASED VIEW')
 
+# TemplateView
 class IndexView(TemplateView):
     template_name = 'index.html'
 
@@ -19,3 +21,13 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['val'] = 'Text'
         return context
+
+class SchoolListView(ListView):
+    context_object_name = 'schools'
+    model = models.School
+    template_name = 'school_list.html'
+
+class SchoolDetailView(DetailView):
+    context_object_name = 'school_detail'
+    model = models.School
+    template_name = 'school_detail.html'
