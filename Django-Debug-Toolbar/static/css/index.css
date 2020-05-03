@@ -1,0 +1,10 @@
+body {
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white !important;
+    font-size: 2em !important;
+}
